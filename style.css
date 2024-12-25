@@ -1,0 +1,670 @@
+body {
+    background-image: url(./foto/pattern_christmas-pattern.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundal alb semi-transparent */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: red;
+    font-size: 100px;
+    text-align: center;
+    font-family: "Kanit", serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+    /* Spațiu între h1 și următorul element */
+}
+
+
+
+.inputBox {
+    position: relative;
+    margin-bottom: 20px;
+    /* Spațiu între input și buton */
+}
+
+.inputBox input {
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid #ee8456;
+    font-size: 1em;
+    width: 300px;
+    /* Lățimea inputului */
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 15px 20px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    color: red;
+    letter-spacing: 0.1em;
+}
+
+.inputBox input:focus~span,
+.inputBox input:valid~span {
+    font-size: 0.7em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ee8456;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #d16b43;
+}
+
+
+
+/* From Uiverse.io by himanshu9682 */
+.type--A {
+    --line_color: #555555;
+    --back_color: #ffecf6;
+}
+
+.type--B {
+    --line_color: #1b1919;
+    --back_color: #e9ecff;
+}
+
+.type--C {
+    --line_color: black;
+    --back_color: red;
+}
+
+.button {
+    position: relative;
+    z-index: 0;
+    width: 240px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all 0.5s ease;
+}
+
+.button::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+}
+
+.button__text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+}
+
+.button__line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button__line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+}
+
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before {
+    left: 0;
+}
+
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before {
+    right: 0;
+}
+
+.button:hover {
+    letter-spacing: 6px;
+}
+
+.button:hover::before,
+.button:hover .button__text::before {
+    width: 8px;
+}
+
+.button:hover::after,
+.button:hover .button__text::after {
+    width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__drow1,
+.button__drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+}
+
+.button__drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+}
+
+.button__drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+}
+
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after {
+    content: "";
+    position: absolute;
+}
+
+.button__drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+}
+
+.button__drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+}
+
+.button__drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+}
+
+.button__drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+}
+
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after {
+    background: var(--back_color);
+}
+
+.button:hover .button__drow1 {
+    animation: drow1 ease-in 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::before {
+    animation: drow2 linear 0.08s 0.06s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow1::after {
+    animation: drow3 linear 0.03s 0.14s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2 {
+    animation: drow4 linear 0.06s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::before {
+    animation: drow3 linear 0.03s 0.26s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .button__drow2::after {
+    animation: drow5 linear 0.06s 0.32s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drow1 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes drow2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 120px;
+    }
+}
+
+@keyframes drow3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80px;
+    }
+}
+
+@keyframes drow4 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes drow5 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 124px;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:not(:last-child) {
+    margin-bottom: 64px;
+}
+
+.copyright{
+    color: white;
+    font-size: larger;
+}
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */
+button {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: black;
+    border: 1px red solid;
+    overflow: hidden;
+}
+
+.text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 22%;
+}
+
+.text2 {
+    position: absolute;
+    top: 25%;
+    left: -50px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;
+}
+
+.icon::before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 33px;
+    border-radius: 30px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    ;
+}
+
+button:hover .icon {
+    transform: translateX(96px);
+    transition: transform 0.5s;
+}
+
+button:hover .text2 {
+    transform: translateX(100px);
+    transition: transform 0.6s;
+}
+
+button:active {
+    transform: scale(1.03);
+}
+
+
+
+
+/* Stilizare pentru meniul drop-down */
+.language-select {
+    position: relative;
+    display: inline-block;
+}
+
+.language-select select {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #fff;
+    border: 2px solid #ee8456;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    appearance: none;
+    /* Elimină stilurile implicite ale selectului */
+    -webkit-appearance: none;
+    /* Pentru Safari */
+    -moz-appearance: none;
+    /* Pentru Firefox */
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+/* Adăugăm o săgeată personalizată */
+.language-select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Stilizare la hover pentru select */
+.language-select select:hover {
+    border-color: #d16b43;
+}
+
+/* Stilizare pentru focus (când utilizatorul dă click pe meniul drop-down) */
+.language-select select:focus {
+    border-color: #ff9c42;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        /* Micșorăm dimensiunea h1 pentru telefoane */
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+        padding: 10px 16px;
+        /* Ajustăm padding-ul pentru confort */
+        font-size: 14px;
+        /* Dimensiune font mai mică pe telefoane */
+        margin-bottom: 15px;
+        /* Margine jos pentru separare */
+    }
+
+    input[type="text"] span {
+        font-size: 12px;
+        /* Dimensiune mică pentru span pe telefoane */
+    }
+
+    .copyright {
+        font-size: 10px;
+        /* Dimensiune mică pentru copyright pe telefoane */
+        margin-top: 15px;
+    }
+}
+
+
+/* Stiluri generale pentru body și html */
+html,
+body {
+    height: 100%;
+    /* Asigură că pagina ocupă întreaga înălțime */
+    margin: 0;
+    /* Elimină marginile implicite ale paginii */
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Containerul principal pentru a organiza elementele */
+.content {
+    display: flex;
+    flex-direction: column;
+    /* Elemente verticale */
+    min-height: 100vh;
+    /* Ocupă toată înălțimea paginii */
+}
+
+/* Conținutul propriu-zis */
+form {
+    flex: 1;
+    /* Permite formului să ocupe tot spațiul disponibil */
+}
+
+/* Stiluri pentru footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+footer button:hover {
+    background-color: #9100eb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stilizare pentru selector */
+#languageSelect {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+}
+
+/* Stilizare pentru opțiuni din selectorul de limbă */
+#languageSelect option {
+    padding-left: 30px;
+    /* Lăsați spațiu pentru steag */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+/* Asigură-te că fiecare opțiune va arăta cu imaginea corectă */
+#languageSelect option[value="en"] {
+    background-image: url('images/england.png');
+}
+
+#languageSelect option[value="ro"] {
+    background-image: url('images/romania.png');
+}
+
+#languageSelect option[value="uk"] {
+    background-image: url('images/ukraine.png');
+}
+
+#languageSelect option[value="hu"] {
+    background-image: url('images/hungary.png');
+}
+
+#languageSelect option[value="de"] {
+    background-image: url('images/germany.png');
+}
+
+#languageSelect option[value="fr"] {
+    background-image: url('images/france.png');
+}
+
+#languageSelect option[value="pl"] {
+    background-image: url('images/poland.png');
+}
+
+#languageSelect option[value="tr"] {
+    background-image: url('images/turkey.png');
+}
